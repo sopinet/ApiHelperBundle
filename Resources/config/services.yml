@@ -1,0 +1,4 @@
+services:
+    sopinet_apihelperbundle_apihelper:
+        class: Sopinet\ApiHelperBundle\Service\ApiHelper
+        arguments: ["@fos_rest.view_handler"]
