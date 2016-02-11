@@ -1,6 +1,6 @@
 {
   "name": "sopinet/apihelper-bundle",
-  "description": "Symfony2 Bundle - API render",
+  "description": "Symfony2 Bundle - API short and fast usual render",
   "keywords": ["api", "symfony2", "bundle", "sopinet"],
   "type": "symfony-bundle",
   "license": "GPL2",
