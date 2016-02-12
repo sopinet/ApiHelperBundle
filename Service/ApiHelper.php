@@ -1,6 +1,6 @@
 <?php
 
-namespace Sopinet\ApiHelperBundle\Services;
+namespace Sopinet\ApiHelperBundle\Service;
 
 use Doctrine\ORM\EntityManager;
 use FOS\RestBundle\View\ViewHandler;
