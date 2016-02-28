@@ -1,11 +1,5 @@
 Symfony2 Bundle - API short and fast usual render
 
-# Bundle dependency
-
-This bundle require another bundles:
-
-https://github.com/schmittjoh/JMSSerializerBundle
-https://github.com/FriendsOfSymfony/FOSRestBundle
 
 # Installation
 
@@ -50,6 +44,17 @@ fos_rest:
     routing_loader:
         default_format: json
 ```
+
+# Bundle dependency
+
+Remember, this bundle has another bundles dependency:
+
+https://github.com/schmittjoh/JMSSerializerBundle
+https://github.com/FriendsOfSymfony/FOSRestBundle
+
+Configuration about these bundles was included.
+If you have any problem with configuration, please, review official documentation about these bundles.
+
 
 # Use
 
