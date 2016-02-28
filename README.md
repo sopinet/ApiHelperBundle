@@ -50,6 +50,7 @@ fos_rest:
 Remember, this bundle has another bundles dependency:
 
 https://github.com/schmittjoh/JMSSerializerBundle
+
 https://github.com/FriendsOfSymfony/FOSRestBundle
 
 Configuration about these bundles was included.
