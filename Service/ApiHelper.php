@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoder;
 use Symfony\Component\Serializer\Serializer;
+use Symfony\Component\Translation\Translator;
 
 class ApiHelper
 {
@@ -23,15 +24,14 @@ class ApiHelper
     const STATE_ERROR = -1;
 
     /**
-     * Constructor
-     *
-     * Recibe a través de 'app/config/services.yml' el EntityManager, el ViewHandler (para crear vistas con la respuesta)
-     *
+     * ApiHelper constructor.
      * @param ViewHandler $viewHandler
+     * @param Translator $translator
      */
-    public function __construct(ViewHandler $viewHandler)
+    public function __construct(ViewHandler $viewHandler, Translator $translator)
     {
         $this->viewhandler = $viewHandler;
+        $this->translator = $translator;
     }
 
     /**
@@ -50,8 +50,10 @@ class ApiHelper
      */
     public function responseOk ($data = null, $groups = "", $message = "", $httpStatusCode = Response::HTTP_ACCEPTED)
     {
+        $msg = $this->translator->trans($message);
+
         $response['state'] = $this::STATE_OK;
-        $response['msg'] = strlen($message) ? $message : $this::OK;
+        $response['msg'] = strlen($msg) ? $msg : $this::OK;
         $response['data'] = $data;
 
         $view = View::create()
@@ -79,7 +81,7 @@ class ApiHelper
     public function responseDenied ($message = "", $httpStatusCode = Response::HTTP_NOT_FOUND)
     {
         $response['state'] = $this::STATE_ERROR;
-        $response['msg'] = $message;
+        $response['msg'] = $this->translator->trans($message);
 
         $view = View::create()
             ->setStatusCode($httpStatusCode)
