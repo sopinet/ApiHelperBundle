@@ -67,6 +67,11 @@ class ApiHelper
 
         return $this->viewhandler->handle($view);
     }
+    /** Compatibilidad hacia atrás **/
+    public function msgOk ($data = null, $groups = "", $message = "", $httpStatusCode = Response::HTTP_ACCEPTED)
+    {
+        return $this->responseOk ($data, $groups, $message, $httpStatusCode);
+    }    
 
     /**
      * responseDenied
@@ -88,6 +93,11 @@ class ApiHelper
             ->setData($response);
 
         return $this->viewhandler->handle($view);
+    }
+    /** Compatibilidad hacia atrás **/
+    public function msgDenied ($message = "", $httpStatusCode = Response::HTTP_NOT_FOUND)
+    {
+        return $this->responseDenied ($message, $httpStatusCode);
     }
 
     /**
