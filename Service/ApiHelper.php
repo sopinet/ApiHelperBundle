@@ -94,11 +94,6 @@ class ApiHelper
 
         return $this->viewhandler->handle($view);
     }
-    /** Compatibilidad hacia atrás **/
-    public function msgDenied ($message = "", $httpStatusCode = Response::HTTP_NOT_FOUND)
-    {
-        return $this->responseDenied ($message, $httpStatusCode);
-    }
 
     /**
      * Se hace un submit de los campos de un request que esten definidos en un formulario
