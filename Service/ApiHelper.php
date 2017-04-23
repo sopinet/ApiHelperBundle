@@ -1,16 +1,12 @@
 <?php
+namespace AppBundle\Utils;
 
-namespace Sopinet\ApiHelperBundle\Service;
-
-use Doctrine\ORM\EntityManager;
+use FOS\RestBundle\Context\Context;
 use FOS\RestBundle\View\ViewHandler;
 use FOS\RestBundle\View\View;
-use JMS\Serializer\SerializationContext;
 use Symfony\Component\Form\Form;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Security\Core\Encoder\UserPasswordEncoder;
-use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\Translation\Translator;
 
 class ApiHelper
@@ -62,7 +58,9 @@ class ApiHelper
 
         if ((is_string($groups) and strlen($groups)) or is_array($groups)) {
             $groupsArray = (array) $groups;
-            $view->setSerializationContext(SerializationContext::create()->setGroups($groupsArray));
+            $context = new Context();
+            $context->setGroups($groupsArray);
+            $view->setContext($context);
         }
 
         return $this->viewhandler->handle($view);
@@ -71,7 +69,7 @@ class ApiHelper
     public function msgOk ($data = null, $groups = "", $message = "", $httpStatusCode = Response::HTTP_ACCEPTED)
     {
         return $this->responseOk ($data, $groups, $message, $httpStatusCode);
-    }    
+    }
 
     /**
      * responseDenied
