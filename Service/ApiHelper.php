@@ -1,5 +1,5 @@
 <?php
-namespace AppBundle\Utils;
+namespace Sopinet\ApiHelperBundle\Service;
 
 use FOS\RestBundle\Context\Context;
 use FOS\RestBundle\View\ViewHandler;
