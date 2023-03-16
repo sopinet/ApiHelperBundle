@@ -1,9 +1,9 @@
 {
-  "name": "sopinet/apihelper-bundle",
-  "description": "Symfony2 Bundle - API short and fast usual render",
-  "keywords": ["api", "symfony2", "bundle", "sopinet"],
+  "name": "itpeopleperformance/apihelper-bundle",
+  "description": "Symfony4 Bundle - API short and fast usual render",
+  "keywords": ["api", "symfony4", "bundle", "sopinet"],
   "type": "symfony-bundle",
-  "license": "GPL2",
+  "license": "MIT",
   "minimum-stability" : "dev",
   "authors": [
     {
@@ -23,9 +23,9 @@
     }
   ],
   "require": {
-    "php": ">=5.3.9",
-    "friendsofsymfony/rest-bundle": "^1.0",
-    "jms/serializer-bundle": "^1.1"
+    "php": ">=7.1",
+    "friendsofsymfony/rest-bundle": "*",
+    "jms/serializer-bundle": "*"
   },
   "autoload": {
     "psr-0": { "Sopinet\\ApiHelperBundle": "" }
