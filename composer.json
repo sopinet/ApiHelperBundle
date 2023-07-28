@@ -24,8 +24,8 @@
   ],
   "require": {
     "php": ">=7.1",
-    "friendsofsymfony/rest-bundle": "*",
-    "jms/serializer-bundle": "*"
+    "friendsofsymfony/rest-bundle": "^2.8.6",
+    "jms/serializer-bundle": "^5.3.1"
   },
   "autoload": {
     "psr-0": { "Sopinet\\ApiHelperBundle": "" }
