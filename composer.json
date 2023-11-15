@@ -24,7 +24,7 @@
   ],
   "require": {
     "php": ">=7.1",
-    "friendsofsymfony/rest-bundle": "3.5.0",
+    "friendsofsymfony/rest-bundle": "3.5",
     "jms/serializer-bundle": "*"
   },
   "autoload": {
