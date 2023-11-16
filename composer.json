@@ -1,6 +1,6 @@
 {
-  "name": "itpeopleperformance/apihelper-bundle-2",
-  "description": "Symfony4 Bundle - API short and fast usual render-2",
+  "name": "itpeopleperformance/apihelper-bundle",
+  "description": "Symfony4 Bundle - API short and fast usual render",
   "keywords": ["api", "symfony4", "bundle", "sopinet"],
   "type": "symfony-bundle",
   "license": "MIT",
