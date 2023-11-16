@@ -7,7 +7,7 @@ Symfony2 Bundle - API short and fast usual render
 
 Write in terminal:
 ```
-composer require sopinet/apihelper-bundle "1.0"
+composer require sopinet/apihelper-bundle-2 "1.0"
 ```
 
 ## AppKernel
